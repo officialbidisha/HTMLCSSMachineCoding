@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+    background: antiquewhite;
+  }
+  header {
+    background-color: gray;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px 0;
+    color: white;
+    font-size: bold;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  .column2{
+    flex:2
+  }
+  .column2 div{
+    font-size: medium;
+    margin-bottom: 10px;
+  }
+  
+  .image {
+   max-width: 120px;
+   max-height: 120px;
+   border-radius: 20px;
+  }
+  
+  .spanlist{
+    max-width: 10%;
+    cursor: pointer;
+  }
+
+  .seemore{
+    float:right;
+    background: white;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
