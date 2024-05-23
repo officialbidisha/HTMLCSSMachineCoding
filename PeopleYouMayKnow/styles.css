@@ -32,7 +32,8 @@ body {
   }
 
   .column2{
-    flex:2
+    flex:2;
+    margin-top: 10px;
   }
   .column2 div{
     font-size: medium;
@@ -58,3 +59,28 @@ body {
     cursor: pointer;
     margin-bottom: 10px;
   }
+
+  .close{
+    cursor: pointer;
+    /* background: #8080800a; */
+    border: 0;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: #2d2323;
+    background: transparent;
+    font-size: 15px;
+    margin-top: 4px;
+  }
+
+  .close:hover{
+    background: #f2dec4;
+  }
+
+  .connect{
+    cursor: pointer;
+    background: white;
+    border: none;
+    color: grey;
+    border-radius: 10px;
+    padding: 10px;
+}
