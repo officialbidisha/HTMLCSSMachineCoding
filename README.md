@@ -9,3 +9,6 @@
 
 ### Nested Comment Box
 <img width="1467" alt="Screenshot 2024-06-02 at 8 01 52 PM" src="https://github.com/officialbidisha/HTMLCSSMachineCoding/assets/49115207/3db8242f-075c-47a2-88ee-7a2344f4dd21">
+
+### Auto Type
+<img width="1470" alt="Screenshot 2024-06-03 at 8 08 51 AM" src="https://github.com/officialbidisha/HTMLCSSMachineCoding/assets/49115207/3365c071-be43-4c78-8c71-6705645f4d8b">
