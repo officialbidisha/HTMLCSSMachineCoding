@@ -1,0 +1,25 @@
+*, *::before, *::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.dynamic_text{
+    color:brown;
+    display: inline-flex;
+}
+
+.dynamic_text::after{
+    content:'|';
+    height: 100%;
+    margin-left: 4px;
+    display: inline;
+    margin-top: 2px;
+}
