@@ -1,6 +1,8 @@
 const progress = document.getElementById('progress');
 let isInProgress = false;
 let reqAniFrameId;
+let queue = [];
+let index = 1;
 
 const progressController = document.querySelector('.progress-controller');
 const startButton = document.getElementById('start');
@@ -12,27 +14,32 @@ progressController.addEventListener('click', clickHandler);
 
 function clickHandler(e) {
   const id = e.target.id;
-
+  if(id === 'start' && isInProgress){
+    index++;
+    queue.push(index);
+    console.log('queue', queue);
+  }
   if (id === 'start' && !isInProgress) {
+    queue.push(index);
     onStart();
   } else if (id === 'stop' && isInProgress) {
     onStop();
+    queue.shift();
   } else if (id === 'reset') {
     onStop();
+    queue.shift();
     setProgressWidth(0);
   }
 }
 
 function onStart(){
   isInProgress = true;
-  startButton.disabled = true;
   stopButton.disabled = false;
   startProgress();
 }
 
 function onStop(){
-    isInProgress = false;
-    startButton.disabled = false;
+     isInProgress = false;
     stopButton.disabled = true;
     stopProgress();
 }
@@ -40,11 +47,17 @@ function onStop(){
 
 function startProgress(){
     let progressPercentage =  0.1+ getProgressWidth();
-
     if (progressPercentage<=100) {
 
         setProgressWidth(progressPercentage);
         reqAniFrameId = requestAnimationFrame(startProgress);
+    }
+    else{
+         queue.shift();
+         if(queue.length>0){
+            setProgressWidth(0);
+            startProgress();
+         }
     }
 }
 
