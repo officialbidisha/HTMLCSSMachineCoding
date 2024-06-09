@@ -1,0 +1,74 @@
+/* Style.css */
+body { 
+	font-family: Arial, sans-serif; 
+	margin: 0; 
+	padding: 0; 
+} 
+header { 
+	display: flex; 
+	color: #308c44; 
+	justify-content: center; 
+} 
+header img { 
+	margin-right: 5px; 
+} 
+.chips-container { 
+	display: flex; 
+	flex-wrap: wrap; 
+	gap: 10px; 
+	width: max-content; 
+	margin: auto; 
+	margin-top: 80px; 
+} 
+
+.chip { 
+	display: flex; 
+	align-items: center; 
+	background-color: #f0f0f0; 
+	border: 1px solid #ccc; 
+	border-radius: 20px; 
+	gap: 5px; 
+} 
+
+.chip-avatar { 
+	width: 24px; 
+	height: 24px; 
+	border-radius: 50%; 
+	background-color: grey; 
+	text-align: center; 
+	line-height: 23px; 
+} 
+
+.close-icon { 
+	cursor: pointer; 
+	margin: 0px 8px; 
+	font-weight: bold; 
+	color: red; 
+} 
+
+.add-chip { 
+	display: flex; 
+	align-items: center; 
+	margin: 10px; 
+	/* border: 2px solid red; */
+	width: max-content; 
+	margin: auto; 
+	margin-top: 50px; 
+} 
+
+#nameInput, 
+#profileIconInput { 
+	padding: 10px; 
+	border-radius: 20px; 
+	border: 1px solid #ccc; 
+	margin-right: 10px; 
+} 
+
+#addChipForm button { 
+	background-color: #007bff; 
+	color: #fff; 
+	border: none; 
+	border-radius: 20px; 
+	padding: 10px 10px; 
+	cursor: pointer; 
+}
