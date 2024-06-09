@@ -12,3 +12,7 @@
 
 ### Auto Type
 <img width="1470" alt="Screenshot 2024-06-03 at 8 08 51 AM" src="https://github.com/officialbidisha/HTMLCSSMachineCoding/assets/49115207/3365c071-be43-4c78-8c71-6705645f4d8b">
+
+### AutoComplete With Chips
+
+<img width="1470" alt="Screenshot 2024-06-10 at 3 16 32 AM" src="https://github.com/officialbidisha/HTMLCSSMachineCoding/assets/49115207/b47da548-c2df-4153-a718-677d7d0aedc2">
