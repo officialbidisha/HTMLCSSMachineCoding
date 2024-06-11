@@ -30,7 +30,6 @@ function renderStars(numberOfStars = NUMBER_OF_STARS) {
     let label = document.createElement("label");
     label.setAttribute("data-id", index);
     label.classList.add("star-label");
-    label.setAttribute("for", index);
     const input = document.createElement("input");
     input.setAttribute("type", "radio");
     input.setAttribute("data-id", index);
