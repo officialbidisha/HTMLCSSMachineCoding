@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+.error {
+  border-color: transparent;
+  border-bottom-color: red;
+}
+.form-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.form-container .submit {
+  display: block;
+  flex-basis: 50%;
+}
+input {
+  width: 10%;
+  border-color: transparent;
+  border-bottom-color: black;
+}
+input:focus {
+  outline: transparent;
+  border-color: transparent;
+  border-bottom-color: rgb(198, 198, 19);
+}
