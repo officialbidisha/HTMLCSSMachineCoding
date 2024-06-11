@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.star-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+label.star-label::before {
+  content: "★ ";
+  margin: 5px;
+}
+label.star-label:hover {
+  cursor: pointer;
+}
+
+[type="radio"]:checked+label::before{
+    color:gold;
+}
