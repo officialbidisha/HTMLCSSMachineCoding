@@ -1,0 +1,68 @@
+const TOTAL_NUMBER_OF_IMAGES = 5;
+const carouselContainer = document.getElementsByClassName('carousel-container');
+const data= ['./assets/image1.jpg', 
+'./assets/image2.jpg',
+'./assets/image3.jpg',
+'./assets/image4.jpg',
+'./assets/image5.jpg',
+];
+
+const nextBtn = document.getElementsByClassName('next-btn')[0];
+const prevBtn = document.getElementsByClassName('prev-btn')[0];
+let activeIndex = 0;
+nextBtn.addEventListener('click', handleNext);
+prevBtn.addEventListener('click', handlePrev);
+/**
+ * Render images
+ * @param {*} numberOfImages 
+ */
+function renderImages(numberOfImages = TOTAL_NUMBER_OF_IMAGES){
+    const inner= createElement('div');
+    inner.classList.add('inner');
+    for(let i=0;i<numberOfImages;i++){
+
+        const item = createElement('div');
+        const image = createElement('img');
+        image.alt = `image ${i+1}`;
+        image.src= `${data[i]}`;
+        item.appendChild(image);
+        item.classList.add('carousel-item');
+        inner.appendChild(item);
+        inner.style.transform= 'translateX(-0%)';
+        carouselContainer[0].appendChild(inner);
+    }
+}
+
+/**
+ * Create element
+ * @param {*} elementName 
+ * @returns 
+ */
+function createElement(elementName){
+    return document.createElement(elementName);
+}
+
+renderImages(TOTAL_NUMBER_OF_IMAGES);
+
+function handlePrev(event){
+    activeIndex--;
+    if(activeIndex === TOTAL_NUMBER_OF_IMAGES){
+        activeIndex = 0;
+    }
+    let inner = document.getElementsByClassName('inner');
+    for(let i=0;i<inner.length;i++){
+        inner[i].style.transform = `translateX(-${activeIndex* 100}%)`;
+    }
+}
+
+function handleNext(event){
+    activeIndex++;
+    if(activeIndex === TOTAL_NUMBER_OF_IMAGES){
+        activeIndex = 0;
+    }
+    let inner = document.getElementsByClassName('inner');
+    for(let i=0;i<inner.length;i++){
+        inner[i].style.transform = `translateX(-${activeIndex* 100}%)`;
+    }
+}
+

@@ -8,61 +8,63 @@ const data = {
 };
 
 function togglePanel(event) {
-  let accordionBody = document.getElementsByClassName("accordion-panel")[event.target.id];
-  let accordionArrow = document.getElementsByClassName("accordion-arrow")[event.target.id];
-  console.log(accordionArrow);
-  let computedStyle = getComputedStyle(accordionBody);
-  if (computedStyle.display === "none") {
-    accordionBody.style.display = "block";
-    accordionArrow.style.transform = "rotate(180deg)";
-    accordionArrow.classList.add("rotate");
-  } else {
-    accordionBody.style.display = "none";
-    accordionArrow.style.transform = "rotate(0deg)";
-    if (accordionArrow.classList.contains("rotate")) {
-      accordionArrow.classList.remove("rotate");
+  let accordionBody =
+    document.getElementsByClassName("accordion-panel")[event.target.id];
+  let accordionArrow =
+    document.getElementsByClassName("accordion-arrow")[event.target.id];
+  if (accordionBody) {
+    let computedStyle = getComputedStyle(accordionBody);
+    if (computedStyle.display === "none") {
+      accordionBody.style.display = "block";
+      accordionArrow.style.transform = "rotate(180deg)";
+      accordionArrow.classList.add("rotate");
+    } else {
+      accordionBody.style.display = "none";
+      accordionArrow.style.transform = "rotate(0deg)";
+      if (accordionArrow.classList.contains("rotate")) {
+        accordionArrow.classList.remove("rotate");
+      }
     }
   }
 }
 
 let accordion = document.getElementsByClassName("accordion")[0];
-accordion.addEventListener('click', togglePanel)
+accordion.addEventListener("click", togglePanel);
 function createHeader(index) {
-    let accordionHeader = document.createElement("div");
-    accordionHeader.classList.add("accordion-header");
-    let accordionArrow = document.createElement("div");
-    accordionArrow.classList.add("accordion-arrow");
-    accordionHeader.id = index;
-    accordion.appendChild(accordionHeader);
-    /**
-     * Insert sibling
-     */
-    let accordionName = document.createElement("h2");
-    accordionName.classList.add("accordion-name");
-    let textElement = document.createTextNode(data.steps[index]);
-    accordionName.append(textElement);
-    accordionHeader.insertAdjacentElement("beforeend", accordionName);
-    accordionHeader.appendChild(accordionArrow);
+  let accordionHeader = document.createElement("div");
+  accordionHeader.classList.add("accordion-header");
+  let accordionArrow = document.createElement("div");
+  accordionArrow.classList.add("accordion-arrow");
+  accordionHeader.id = index;
+  accordion.appendChild(accordionHeader);
+  /**
+   * Insert sibling
+   */
+  let accordionName = document.createElement("h2");
+  accordionName.classList.add("accordion-name");
+  let textElement = document.createTextNode(data.steps[index]);
+  accordionName.append(textElement);
+  accordionHeader.insertAdjacentElement("beforeend", accordionName);
+  accordionHeader.appendChild(accordionArrow);
 }
 
 function createBody(index) {
- 
-    let accordionPanel = document.createElement("div");
-    accordionPanel.classList.add("accordion-panel");
-    accordionPanel.id = index;
-    let accordionBody = document.createElement('p');
-    let textNode = document.createTextNode(data.description[index]);
-    accordionBody.append(textNode);
-    accordionPanel.append(accordionBody);
-    console.log(accordion);
-    accordion.appendChild(accordionPanel);
+  let accordionPanel = document.createElement("div");
+  accordionPanel.classList.add("accordion-panel");
+  accordionPanel.id = index;
+  let accordionBody = document.createElement("p");
+  let textNode = document.createTextNode(data.description[index]);
+  accordionBody.append(textNode);
+  accordionPanel.append(accordionBody);
+  console.log(accordion);
+  accordion.appendChild(accordionPanel);
 }
 
 function generateAccordion() {
- for(let i=0;i<data.steps.length;i++){
-  createHeader(i);
-  createBody(i);
- }
+  for (let i = 0; i < data.steps.length; i++) {
+    createHeader(i);
+    createBody(i);
+  }
 }
 
 generateAccordion();

@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    margin: 5px;
+    position: relative;
+}
+.carousel-container {
+    overflow: hidden;
+}
+
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+.carousel-item {
+    display: inline-flex; /** The carousal item will have inline flex -like the container will behave like a inline item */
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: brown;
+    background-size: contain;
+    background-repeat: repeat-x;
+    width: 100%;
+}
+
+img {
+    width: inherit;
+    height: min-content;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+.controls {
+    position: absolute;
+    top: 50%;
+    margin: 0px;
+    width: 100%;
+}
+
+.prev-btn, .next-btn{
+    padding:10px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+
+    outline: 0px;
+    font-size: 20px;
+    border:0px
+}
+.next-btn{
+    position: absolute;
+    right: 0%;
+}

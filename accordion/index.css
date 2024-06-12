@@ -19,6 +19,8 @@
     border: 2px solid black;
     border-radius: 10px;
     padding: 10px;
+    margin: 10px 0;
+    background: aqua;
 }
 
 .accordion-header:hover{
@@ -34,6 +36,7 @@
 .accordion-panel{
     padding: 10px;
     display: none;
+    background: #00ffff33;
 }
 
 .rotate{
