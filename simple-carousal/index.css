@@ -22,7 +22,6 @@
     display: inline-flex; /** The carousal item will have inline flex -like the container will behave like a inline item */
     justify-content: center;
     align-items: center;
-    height: 200px;
     background-color: brown;
     background-size: contain;
     background-repeat: repeat-x;
