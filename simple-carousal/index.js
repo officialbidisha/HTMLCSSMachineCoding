@@ -45,24 +45,24 @@ function createElement(elementName){
 renderImages(TOTAL_NUMBER_OF_IMAGES);
 
 function handlePrev(event){
-    activeIndex--;
-    if(activeIndex === TOTAL_NUMBER_OF_IMAGES){
-        activeIndex = 0;
+    if(activeIndex === 0){
+        activeIndex = TOTAL_NUMBER_OF_IMAGES-1;
+    }else{
+        activeIndex--;
     }
     let inner = document.getElementsByClassName('inner');
-    for(let i=0;i<inner.length;i++){
-        inner[i].style.transform = `translateX(-${activeIndex* 100}%)`;
-    }
+    inner[0].style.transform = `translateX(-${activeIndex* 100}%)`;
+    
 }
 
 function handleNext(event){
-    activeIndex++;
-    if(activeIndex === TOTAL_NUMBER_OF_IMAGES){
+    if(activeIndex === TOTAL_NUMBER_OF_IMAGES-1){
         activeIndex = 0;
+    }else{
+        activeIndex++;
     }
     let inner = document.getElementsByClassName('inner');
-    for(let i=0;i<inner.length;i++){
-        inner[i].style.transform = `translateX(-${activeIndex* 100}%)`;
-    }
+    inner[0].style.transform = `translateX(-${activeIndex* 100}%)`;
+    
 }
 
