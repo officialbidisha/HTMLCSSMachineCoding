@@ -1,0 +1,47 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: white;
+  }
+  
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  
+  .input_box{
+    width: 300px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+  .input_box.active{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius:0px;
+  }
+  
+  .suggestions.active{
+    width: 300px;
+    border: 1px solid black;
+    overflow-y: scroll;
+    max-height: 200px;
+    border-top-color: transparent;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 10px 10px;
+  }
+  .suggestions li{
+    list-style: none;
+    padding:5px;
+  }
+  
+  li:active, li:focus {border: 5px solid orange}
