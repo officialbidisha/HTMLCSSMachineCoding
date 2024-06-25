@@ -66,3 +66,22 @@ function handleNext(event){
     
 }
 
+function handleKeyboardNav(e) {
+    if (!e) e = window.event;
+    var kc = e.keyCode;
+    if (kc == 37) navigatePrev();
+    if (kc == 39) navigateNext();
+  }
+  
+  function bindKeyDownListener() {
+    window.addEventListener("keydown", handleKeyboardNav, false);
+  }
+  
+  //start the binding
+  bindKeyDownListener();
+  
+  window.addEventListener('unload', ()=>{
+    document.removeEventListener('keydown')
+  })
+
+
