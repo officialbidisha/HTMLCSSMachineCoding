@@ -16,3 +16,7 @@
 ### AutoComplete With Chips
 
 <img width="1470" alt="Screenshot 2024-06-10 at 3 16 32 AM" src="https://github.com/officialbidisha/HTMLCSSMachineCoding/assets/49115207/b47da548-c2df-4153-a718-677d7d0aedc2">
+
+### Typeahead with accessibility 
+
+<img width="1470" alt="Screenshot 2024-06-25 at 8 04 59 PM" src="https://github.com/officialbidisha/HTMLCSSMachineCoding/assets/49115207/54fb3bac-17c9-436f-aa37-14e197f4642d">
