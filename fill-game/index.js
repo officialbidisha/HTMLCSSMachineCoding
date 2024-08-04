@@ -10,7 +10,6 @@ const BOX_DATA = [
 const getOnes = () => BOX_DATA.flat().filter(x => x === 1).length;
 
 export default function App() {
-  const [selectionStack, setSelectionStack] = useState(new Set());
   const [shapeState, setShapeState] = useState(new Set());
   const [isAllSelected, setIsAllSelected] = useState(false);
 
