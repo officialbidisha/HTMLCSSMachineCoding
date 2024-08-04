@@ -25,13 +25,12 @@ export default function App() {
         return updated;
       });
     }
-  };
 
-  useEffect(() => {
-    if (shapeState.size === getOnes()) {
+    // Check if the current state matches the criteria
+    if (shapeState.size === getOnes() - 1) {
       setIsAllSelected(true);
     }
-  }, [shapeState]);
+  };
 
   useEffect(() => {
     if (isAllSelected) {
@@ -53,9 +52,18 @@ export default function App() {
         });
       }, 400);
 
-      return () => clearInterval(intervalRef.current); // Cleanup interval on unmount or when dependencies change
+      return () => {
+        clearInterval(intervalRef.current); // Clear interval on unmount or when dependencies change
+      };
     }
   }, [isAllSelected]);
+
+  // Optional: Check if shapeState size needs to reset isAllSelected flag
+  useEffect(() => {
+    if (shapeState.size === 0) {
+      setIsAllSelected(false);
+    }
+  }, [shapeState]);
 
   return (
     <div onClick={selectBox}>
