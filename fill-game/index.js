@@ -19,11 +19,6 @@ export default function App() {
   const selectBox = (event) => {
     const attr = event.target.getAttribute('data-id');
     if (attr) {
-      setSelectionStack(prev => {
-        const updated = new Set(prev);
-        updated.add(attr);
-        return updated;
-      });
       setShapeState(prev => {
         const updated = new Set(prev);
         updated.add(attr);
