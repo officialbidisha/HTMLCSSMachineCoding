@@ -17,7 +17,6 @@ function clickHandler(e) {
   if(id === 'start' && isInProgress){
     index++;
     queue.push(index);
-    console.log('queue', queue);
   }
   if (id === 'start' && !isInProgress) {
     queue.push(index);
